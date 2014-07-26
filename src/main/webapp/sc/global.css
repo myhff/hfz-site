@@ -1,0 +1,247 @@
+@charset 'utf-8';
+
+html { overflow-x: hidden; }
+html, body { height: 100%; margin: 0; }
+body { padding-bottom: 1px; background: #f9f9f9; }
+#warp {
+  width: 980px; margin: 0 auto; border: 1px solid red; color: #3c3c3c;
+  font-size: 12px; font-family: Verdana,Arial,Helvetica,sans-serif;
+}
+
+input,button,select,textarea { outline:none; }
+input { padding-left: 2px; }
+
+p { margin: 0; }
+a, a:active, a:visited { text-decoration: none; }
+
+body #top { background-color: aliceblue; background-color: white; }
+body #top header {
+  width: 980px; margin: 0 auto; padding: 15px 0 12px 0; position: relative; padding-top: 25px;
+}
+body header #logo {
+  display: inline-block; margin: 20px 0 0; margin-bottom: 3px;
+  font-size: 24px; font-weight: normal; letter-spacing: -1px; line-height: 1;
+  display: none;
+}
+body header #logo a { color: #5d7895; cursor: default; }
+body header #info .tagline {
+  color: black; font-size: 13px; line-height: 1.334; padding-left: 8px;
+  font-family: "Helvetica Neue",\5FAE\8F6F\96C5\9ED1,Tohoma;
+  -webkit-text-shadow: 1px 1px 1px rgba(0,0,0,.2);
+  -moz-text-shadow: 1px 1px 1px rgba(0,0,0,.2);
+  text-shadow: 1px 1px 1px rgba(0,0,0,.2);
+}
+body header #admin-login { 
+  display: none; margin-right: 30px;
+  font-size: 13px; float:right; line-height: 1.334; color: #999;
+}
+body header #admin-login a:hover { text-decoration: underline; }
+
+#nav-wrap {
+  display: relative;
+  /*background: #E0EEE0;*/ background: rgb(0, 0, 128);  
+  background: #53868B; background: darkseagreen;
+  background: #666;
+}
+#nav-wrap nav {
+  margin: 0 auto; width: 980px;
+}
+#nav-wrap nav ul { zoom: 1; list-style-type: none; margin: 0; padding: 0; }
+#nav-wrap nav ul:after {
+  content:'\0020'; display:block; clear:both; height:0;
+}
+#nav-wrap nav ul li { float: left; font-size: 100%; }
+#nav-wrap nav ul li a {padding: 0 40px 0 0;
+  display: block;
+  height: 45px; line-height: 45px; padding: 0 20px; 
+  font-family: 'Monda', sans-serif; font-size: 14px; font-weight: 700; 
+  color: darkslategray; color: #cc9; 
+  text-decoration: underline;
+  color: white; padding: 0 25px 0 15px;
+}
+#nav-wrap nav ul li a:hover { color: lightblue; }
+#nav-wrap nav ul li a.active { color: lavender; text-decoration: none; }
+
+#content {
+  border: 0px solid blue; width: 100%; margin-right: -232px; float: left;
+  border: 1px solid #eee; background: white;
+}
+aside {
+  width: 220px; border: 0px solid #666; margin-right: -232px;
+  float: right; overflow:hidden;
+}
+aside section {
+  background: #fafafa; background: #E8E8D0; background: #ECECFF;
+  border: 1px solid #ddd; border: 1px solid #ccc;
+  padding: 5px 10px 5px;
+  margin-bottom: 10px;
+  border-radius: 0;
+ _height: 1%;
+}
+aside section h3 {
+  font-size: 15px; margin: 0; padding: 5px 0;
+}
+aside section ul {
+  margin: 0; padding-left: 30px; padding-bottom: 5px; list-style-type: square;
+}
+aside section li a, aside section li a:visited { color: #27408B; }
+
+#main {
+  width: 748px; margin: 15px auto 0; border: 0px solid green;
+  overflow: hidden;
+  padding-right: 232px; 
+}
+
+#search input { margin: 5px 0 15px; margin: 0; width: 98%; font-size: 18px; }
+#search button { font-size: 18px; margin: 4px 0 0; cursor: pointer; font-weight: 700; color: #444; }
+
+#main .post {
+  margin: 0; padding: 10px 15px 0px;
+  overflow: hidden;
+}
+#main .post hr {
+  border: 0; border-bottom: 1px solid #eee; display: block; margin: 10px 0 10px;
+}
+#main .post a { color: #333; }
+#main a:hover { color: #f00; }
+#main .post header { width: auto; margin: 0 0 10px 0; }
+#main .post header h2 {
+  margin: 0 0 5px 0;
+  font-size: 12pt;
+  font-family: Verdana,sans-serif,宋体; 
+}
+#main .post header h2.blog-title {
+  margin-bottom: 10px; font-weight: normal;
+}
+#main .post header h2 a {
+  color: darkslategray;
+  color: #006699; color: #333; font-size: 12pt;
+}
+#main .post header h2 span.t {
+  color: black; font-size: 22px;
+}
+#main .post header h2 a:hover {
+  color: red; text-decoration: underline;
+}
+#main .post .blog-excerpt {
+  margin-top: 8px; padding: 10px; background: #f4f7f9;
+  font-family: Verdana,sans-serif,宋体; letter-spacing: 0.7px; line-height: 180%; font-size: 12px;
+}
+#main .post small { color:#666;font-family:'微软雅黑';font-size:10pt; }
+em.corner {
+  font-size: 13px; font-weight: normal; font-style: normal; line-height: 20px; color: #FFF;
+  display: inline-block; background: slategray; padding: 1px 8px; margin-right: 10px;
+}
+#main .post .post-cat { font-size: 12px; color: #666; }
+#main .post .post-cat a, a:visited { color: #666; }
+#main .post .post-cat a:hover, a:active { color: red; }
+#main .post .post-info {
+  margin: 15px 0 12px 0; font-size: 12px; color: #666;
+}
+#main .post .post-info a { text-decoration: underline; }
+#main .post .blog-content {
+  text-align: left; font-size: 12.5px; color: #333; line-height: 180%;
+  overflow: hidden; padding: 10px;
+}
+
+#main a.tag {
+  background-color: #E0EAF1;
+  border-bottom: 1px solid #3E6D8E;
+  border-right: 1px solid #7F9FB6;
+  color: #3E6D8E;
+  font-size: 8pt;
+  line-height: 2.4;
+  margin: 2px 2px 2px 0;
+  padding: 2px 4px;
+  text-decoration: none;
+  white-space: nowrap;
+}
+#main a.tag:hover {
+  background-color: #3E6D8E; color: #fff;
+}
+
+#main .BlogLinks { margin: 8px 15px 5px; }
+#main .BlogLinks ul { list-style-type: none; zoom: 1; margin: 0; padding: 0; }
+#main .BlogLinks ul:after { content: '\0020'; clear: both; display: block; height: 0; }
+#main .BlogLinks li.prev { width: 48%; float: left; }
+#main .BlogLinks li.next { width: 48%; float: right; text-align: right; }
+#main .BlogLinks li a {
+  color: #778899; outline: 0; text-decoration: underline; font-weight: bold;
+  font-size: 10pt; font-family: Verdana,sans-serif,宋体; height: 24px; line-height: 24px;
+}
+#main .BlogLinks li a:hover, 
+#main .BlogLinks li a:active { color: #00688B; }
+
+#main .BlogRelated { margin: 8px 15px 12px; font-size: 14px; }
+#main .BlogRelated strong { color: #444; }
+#main .BlogRelated .date { float: right; color: #666666; }
+#main .BlogRelated ul { list-style-type: circle; margin: 5px 0 0; padding-left: 18px; }
+#main .BlogRelated ul li { width: 55%; }
+#main .BlogRelated li a {
+  color: #778899; outline: 0; text-decoration: underline; font-weight: bold;
+  font-size: 10pt; font-family: Verdana,sans-serif,宋体; height: 24px; line-height: 24px;
+}
+#main .BlogRelated li a:hover, 
+#main .BlogRelated li a:active { color: #00688B; }
+
+footer {
+  width: 980px; margin: 0 auto; padding: 15px 0 12px 0; text-align: center;
+  font-size: 14px; line-height: 1.5;
+  font-family: Helvetica,arial,sans-serif;
+  padding-right: 230px;
+}
+footer, footer a { color: #444; }
+
+
+#backToTop {
+  position: fixed;
+ _position: absolute;
+  right: 100px; bottom: 50px; _bottom: "auto"; cursor: pointer;
+  padding: 8px 2px;
+  width: 18px;
+  background-color: white;
+  border: 1px dashed gray;
+  font-size: 12px; text-align: center; line-height: 1.2; color: slategray;
+  opacity: .6; filter: Alpha(opacity=60);
+}
+#backToTop.offScreen{ bottom:-100px; }
+
+/* 分页 */
+.paging {
+  font-size: 14px; margin: 8px 15px 12px;
+}
+.paging a { color: #27408B; }
+
+/* 全文检索 */
+#main .post .highlight { color: red; }
+
+/* 编辑器 */
+blockquote {
+  margin: 15px 10px;
+  border: 2px solid #eee;
+  padding: 5px 5px 5px 35px;
+  background: #f4f5f7 url('http://my.oschina.net/img/blockquote.gif') no-repeat left top;
+  color: #060;
+  font-size: 9pt;
+  display: block;
+ -webkit-margin-before: 1em;
+ -webkit-margin-after: 1em;
+ -webkit-margin-start: 40px;
+ -webkit-margin-end: 40px;
+}
+
+#main #ds-thread { margin: 0 15px; }
+#main #ds-thread #ds-reset .ds-meta { padding-top: 0; }
+#main #ds-thread #ds-reset .ds-replybox { width: 85%; }
+/*
+#main #ds-thread #ds-reset .ds-meta { border-bottom: 1px solid #999; }
+#main #ds-thread #ds-reset li.ds-post { border-top: 1px solid #999; }
+#main #ds-thread #ds-reset .ds-comments { border-bottom: 1px solid #999; }
+*/
+#main #ds-reset .ds-rounded-top,
+#main #ds-thread #ds-reset .ds-post-options,
+#main #ds-thread #ds-reset .ds-post-button { border-radius: 0; }
+
+/* 滚动悬浮 */
+#main .scroll-afloat { }
+#main .scroll-afloat-impl { position: fixed; top: -270px; }

@@ -1,0 +1,62 @@
+<!doctype html>
+<html dir="ltr" lang="zh-CN">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>个人博客 &raquo; 登录</title>
+<script src="../sc/js/jquery-1.11.1.min.js"></script>
+<style type="text/css">
+ body { margin: 15px; font-size: 14px; } * { outline: none; }
+ input { padding-left: 3px; } button {
+   cursor: pointer; 
+   font-weight: bold; font-size: 14px;
+   padding: 3px 5px; display: inline-block; margin-top: 10px;
+ }
+ p { color: #A00; padding-left: 40px; }
+</style>
+<script type="text/javascript">
+$(function() {
+  $('input[name=email]').focus();
+  $('button').click(function() {
+	$('#err').html('');
+    var email = $('input[name=email]').val();
+    var pwd = $('input[name=pwd]').val();
+    var remember;
+    var isChd = $('input[name=remember]').prop('checked');
+    if (isChd) {
+        remember = $('input[name=remember]').val()
+    }
+    $.ajax({url: '../admin/?tp=login_', type: 'POST',
+      data: { email: email, pwd: pwd, remember: remember},
+      success: function(data) {
+        if (/1/.test(data)) {
+          window.location.href='../admin/'
+        } else {
+          $('#err').html('登陆名或密码错误！');
+          if (!/\S/.test(email)) {
+            $('input[name=email]').focus();
+          } else {
+            $('input[name=pwd]').focus();
+          }
+        }
+      }
+    });
+  });
+  document.onkeydown = function(e){ 
+    var ev = document.all ? window.event : e;
+    if (ev.keyCode == 13) {
+      $('button').click();
+    }
+  }
+});
+</script>
+</head>
+<body>
+<pre>
+登陆名：<input type="text" name="email" placeholder="邮箱" />
+密　码：<input type="password" name="pwd" />
+　　　　<input type="checkbox" name="remember" value="1" />自动登陆
+　　　　<button>现在登录</button>
+</pre>
+<p id="err"></p>
+</body>
+</html>

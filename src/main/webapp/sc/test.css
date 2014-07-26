@@ -1,0 +1,52 @@
+@charset 'utf-8';
+
+.admin { zoom: 1; margin: 8px 20px 0; background: #f9f9f9; }
+.admin:after {
+   content:'\0020'; display:block; clear:both; height:0;
+ }
+.admin section { margin: 0 0 5px; font-size: 12.5px; color: #333; font-family: Verdana,sans-serif,宋体; }
+.admin section strong { line-height: 22px; }
+.admin section .blog-title,
+.admin section .blog-tags  { position: relative; }
+.admin section .blog-title input,
+.admin section .blog-tags  input {
+  margin: 0; padding:0; width: 98.1%; padding: 4px 6px; height: 20px; line-height: 20px; display: inline-block;
+  background-color: #fff;
+  border: 1px solid #D9D9D9;
+  border-top-color: #C0C0C0;
+  border-left-color: #d0d0d0;
+  -webkit-transition: border linear .2s;
+  -moz-transition: border linear .2s;
+  transition: border linear .2s;
+  border-radius: 0;
+  outline: 0;
+}
+.admin section .blog-excerpt textarea {
+  height: 54px; resize: none; width: 98.1%; padding: 4px 6px; line-height: 20px;
+  background-color: #fff;
+  border: 1px solid #D9D9D9;
+  border-top-color: #C0C0C0;
+  border-left-color: #d0d0d0;
+  -webkit-transition: border linear .2s;
+  -moz-transition: border linear .2s;
+  transition: border linear .2s;
+  border-radius: 0;
+  outline: 0;
+}
+.admin section button { font-size: 16px; cursor: pointer; font-weight: 700; color: #333; }
+.admin aside, .admin #content { float:left; }
+.admin aside { position: fixed; left: 20px; width: 140px; border: 1px solid #efefef; background: white; }
+.admin aside ul li { padding: 3px 0; list-style-type: square; }
+.admin aside ul li a:hover { color: red; }
+.admin #content {
+   width: 720px; border: 1px solid #efefef; background: white; min-height: 500px;
+   padding: 5px 10px 0; margin-left: 150px;
+ }
+
+/* 分页 */
+.paging {
+  font-size: 14px; margin-top: 10px;
+}
+.paging a { color: #27408B; }
+
+

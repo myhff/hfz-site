@@ -1,0 +1,148 @@
+.wmd-button-bar {
+	width: 100%;
+	margin: 10px 0px 1px 0px;
+}
+
+.wmd-button-row {
+	position: relative;
+	margin-left: 5px;
+	margin-right: 5px;
+	margin-bottom: 5px;
+	margin-top: 10px;
+	padding: 0px;
+	height: 20px;
+	width: 720px;
+}
+
+.wmd-spacer {
+	width: 1px;
+	height: 20px;
+	margin-left: 14px;
+	position: absolute;
+	background-color: Silver;
+	display: inline-block;
+	list-style: none;
+}
+
+.wmd-button {
+	width: 20px;
+	height: 20px;
+	padding-left: 2px;
+	padding-right: 3px;
+	position: absolute;
+	display: inline-block;
+	list-style: none;
+	cursor: pointer;
+}
+
+.wmd-button>span {
+	background-image: url(wmd-buttons.png);
+	background-repeat: no-repeat;
+	background-position: 0px 0px;
+	width: 20px;
+	height: 20px;
+	display: inline-block;
+}
+
+.wmd-spacer1 {
+	left: 50px;
+}
+
+.wmd-spacer2 {
+	left: 175px;
+}
+
+.wmd-spacer3 {
+	left: 300px;
+}
+
+.wmd-prompt-background {
+	background-color: Black;
+}
+
+.wmd-prompt-dialog {
+	border: 1px solid #999999;
+	background-color: #F5F5F5;
+}
+
+.wmd-prompt-dialog>div {
+	font-size: 10pt;
+	font-family: arial, helvetica, sans-serif;
+}
+
+.wmd-prompt-dialog input[type="text"] {
+	border: 1px solid #999999;
+	color: black;
+}
+
+.wmd-prompt-dialog input[type="button"] {
+	border: 1px solid #888888;
+	font-size: 10pt;
+	font-weight: bold;
+}
+
+.wmd-prompt-dialog input[type="submit"] {
+	border: 1px solid #888888;
+	font-size: 10pt;
+	font-weight: bold;
+}
+
+.wmd-help-button.active-help {
+	background-color: #F3EED5;
+	height: 30px;
+	padding-left: 3px;
+}
+
+.wmd-mini-button,.wmd-mini-button:visited {
+	width: 60px;
+	padding: 3px 8px;
+	text-decoration: none;
+	margin: 5px 5px 5px 5px;
+	color: #444;
+}
+
+.wmd-mini-button:hover,.wmd-mini-button.selected {
+	text-decoration: none;
+	-moz-border-radius: 15px;
+	-webkit-border-radius: 15px;
+	border-radius: 15px;
+	background-color: #ccc;
+}
+
+.wmd-mini-button.selected:hover,.wmd-mini-button.selected {
+	color: #eee;
+	background-color: #888;
+}
+
+.wmd-tab {
+	border-bottom : 1px solid #CCC;
+	margin:0;
+	padding:10px 10px 3px 10px;
+}
+
+.wmd-tab-button,.wmd-tab-button:visited {
+	width: 60px;
+	padding: 3px 8px;
+	text-decoration: none;
+	margin: 5px;
+	color: #444;
+}
+
+.wmd-tab-button:hover,.wmd-tab-button.selected {
+	text-decoration: none;
+	background-color: #ccc;
+}
+
+.wmd-tab-button.selected:hover,.wmd-tab-button.selected {
+	color: #eee;
+	background-color: #888;
+}
+
+.wmd-preview {
+	border: 2px dotted #CCC;
+	padding: 3px;
+	margin-top: 10px;
+	overflow: hidden;
+	width: 720px;
+	min-height: 470px;
+}

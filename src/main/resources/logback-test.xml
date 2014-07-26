@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration>
+<configuration>
+    <appender name="stdout" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <Pattern>%d{HH:mm:ss.SSS} %-5level %logger{35} - %msg %n</Pattern>
+        </encoder>>
+    </appender>
+    <appender name="file" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>logs/log.log</file>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <FileNamePattern>logs/log.%d{yyyy-MM-dd}.log</FileNamePattern>
+        </rollingPolicy>
+        <encoder>
+            <Pattern>[%date{yyyy-MM-dd HH:mm:ss}] [%-5level] [%logger:%line] --%mdc{client} %msg%n</Pattern>
+        </encoder>
+    </appender>
+    <appender name="failSql" class="ch.qos.logback.core.FileAppender">
+        <file>logs/fail.sql.log</file>
+        <encoder>
+            <Pattern>%date{yyyy-MM-dd HH:mm:ss} %msg%n</Pattern>
+        </encoder>
+    </appender>
+    <root level="INFO">
+        <appender-ref ref="stdout"/>
+    </root>
+    <logger name="test" level="DEBUG" />
+    <logger name="hff.elegant.blog" level="DEBUG" />
+    <logger name="org.apache.ibatis" level="DEBUG" />
+    <logger name="java.sql.Connection" level="DEBUG" />
+    <logger name="java.sql.ResultSet" level="INFO" />
+    <logger name="com.boaotech.osgi.posdb.FailSqlLog">
+        <appender-ref ref="failSql" />
+    </logger>
+</configuration>
