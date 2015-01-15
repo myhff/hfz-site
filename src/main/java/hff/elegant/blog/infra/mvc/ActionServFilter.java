@@ -2,6 +2,8 @@ package hff.elegant.blog.infra.mvc;
 
 import hff.elegant.blog.infra.mvc.ActionBindContext.ActionBind;
 import hff.elegant.blog.infra.mvc.ActionBindContext.URLMapping;
+import hff.elegant.blog.util.FileCancatUtils;
+import hff.elegant.blog.util.Md5Utils;
 
 import java.io.*;
 import java.lang.reflect.*;
@@ -16,6 +18,7 @@ import javax.servlet.*;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import org.apache.commons.lang.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -96,6 +99,9 @@ public class ActionServFilter implements Filter {
             response.setHeader( "Location", redirectUrl);  
             response.setHeader( "Connection", "close" );  
             return; 
+        }
+        if (httpConcat(_uri, request, response)) {
+            return;
         }
         try {
             _uri = new String(_uri.getBytes("ISO8859_1"), "UTF8");
@@ -211,6 +217,32 @@ public class ActionServFilter implements Filter {
         } 
         servletContext.getRequestDispatcher("/WEB-INF/500.jsp").forward(req, resp);
         return true;
+    }
+
+    private boolean httpConcat(final String _uri, HttpServletRequest req, HttpServletResponse resp)
+    throws IOException, ServletException {
+        String queryStr = req.getQueryString();
+        if (StringUtils.isNotBlank(queryStr) && queryStr.startsWith("?")) {
+            String path = req.getSession().getServletContext().getRealPath("/");
+
+            String[] resources = queryStr.substring(1).split(",");
+            for (int i = 0; i < resources.length; i++) {
+                resources[i] = path + _uri + resources[i];
+                if (resources[i].indexOf("?") > 0) {
+                    resources[i] = resources[i].substring(0, resources[i].indexOf("?"));
+                }
+            }
+            String suffix = resources[0].substring(resources[0].lastIndexOf("."));
+
+            String hexName = Md5Utils.MD5Encode(queryStr).substring(0, 9);
+            char sep = File.separatorChar;
+            String output = path + sep + "sc" + sep + "temp" + sep + hexName + suffix;
+            if (!new File(output).exists())
+                FileCancatUtils.mergeFiles(output, resources);
+            req.getRequestDispatcher("/sc/temp/" + hexName + suffix).forward(req, resp);
+            return true;
+        }
+        return false;
     }
 
     private static String getServletPath(HttpServletRequest request) {
