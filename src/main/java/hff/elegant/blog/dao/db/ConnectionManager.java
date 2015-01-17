@@ -1,7 +1,13 @@
 package hff.elegant.blog.dao.db;
 
-import java.lang.reflect.*;
-import java.sql.*;
+import java.lang.reflect.InvocationHandler;
+import java.lang.reflect.InvocationTargetException;
+import java.lang.reflect.Method;
+import java.lang.reflect.Proxy;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+import java.util.ArrayList;
 import java.util.Properties;
 
 import javax.sql.DataSource;
@@ -128,8 +134,49 @@ public class ConnectionManager {
                 String method = m.getName();
                 if("prepareStatement".equals(method)) {
                     logger.debug("[SQL] >>> {}", args[0]);
+                    PreparedStatement pstmt = (PreparedStatement) m.invoke(connection, args);
+                    return new _DebugPreparedStatement(pstmt).getPreparedStatement();
                 }
                 return m.invoke(connection, args);
+            }
+            catch (InvocationTargetException e) {
+                throw e.getTargetException();
+            }
+        }
+    } //#class _DebugConnection
+
+    /**
+     * 用于跟踪执行的SQL语句参数
+     */
+    static class _DebugPreparedStatement implements InvocationHandler {
+        private static final Logger logger = LoggerFactory.getLogger(_DebugPreparedStatement.class);
+        private PreparedStatement pstmt = null;
+
+        private ArrayList<String> paramValues = new ArrayList<String>();
+
+        public _DebugPreparedStatement(PreparedStatement pstmt) {
+            this.pstmt = pstmt;
+        }
+
+        /**
+         * Returns the pstmt.
+         * @return PreparedStatement
+         */
+        public PreparedStatement getPreparedStatement() {
+            return (PreparedStatement) Proxy.newProxyInstance(pstmt.getClass().getClassLoader(), 
+                    pstmt.getClass().getInterfaces(), this);
+        }
+
+        public Object invoke(Object proxy, Method m, Object[] args) throws Throwable {
+            try {
+                String method = m.getName();
+                if(method.startsWith("setObject")) {
+                    paramValues.add( String.valueOf(args[1]) );
+                }
+                if(method.startsWith("execute") && !paramValues.isEmpty()) {
+                    logger.debug("[SQL] >>> parameters{}", paramValues); paramValues.clear();
+                }
+                return m.invoke(pstmt, args);
             }
             catch (InvocationTargetException e) {
                 throw e.getTargetException();
