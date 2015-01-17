@@ -140,7 +140,7 @@ public class HomeAction extends ActionDriven {
             super.print("ok");
             return;
         }
-        super.redirect("/admin/list/");
+        super.redirect(super.request().getContextPath() + "/admin/list/");
     }
 
     /** 登录 */
