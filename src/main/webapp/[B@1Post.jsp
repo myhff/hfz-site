@@ -13,6 +13,7 @@
 <meta name="keywords" content="${one.tags}" />
 <meta name="description" content="${one.excerpt}" />
 <link href="${staticPath}/sc/??sh309/styles/shCoreDefault.css,global.css?t=201407240229" rel="stylesheet" />
+  <style>::selection { background:#c00!important; color:#fff!important; }</style>
   <!--[if lt IE 9]>
 <script src="//cdn.staticfile.org/html5shiv/3.7/html5shiv.min.js"></script><![endif]-->
 </head>

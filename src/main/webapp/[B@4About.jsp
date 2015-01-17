@@ -13,6 +13,7 @@
 <meta name="description" content="Java个人博客" />
 <link href="${staticPath}/sc/??sh309/styles/shCoreDefault.css,global.css?t=201407240229" rel="stylesheet" />
   <!--[if lt IE 9]>
+  <style>::selection { background:#c00!important; color:#fff!important; }</style>
 <script src="//cdn.staticfile.org/html5shiv/3.7/html5shiv.min.js"></script><![endif]-->
 <style> .pro_name a{color: #ff0000;} .osc_git_title{background-color: #edeef5;} .osc_git_box{background-color: #fafafa;} .osc_git_box{border-color: #d1d3e6;} .osc_git_info{color: #666;} .osc_git_main a{color: #435991;} </style>
 <style>
