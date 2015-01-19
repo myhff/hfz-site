@@ -131,9 +131,11 @@ tinymce.init({
   language:'zh_CN'
 });
 $(window).load(function() {
-	var a = document.getElementById('cc_content').innerHTML;
-	//alert(a);
-	tinymce.get('elm1').setContent(a);
+  setTimeout(function() {
+    var a = document.getElementById('cc_content').innerHTML;
+    //alert(a);
+    tinymce.get('elm1').setContent(a);
+  }, 100);
 });
 String.prototype.replaceAll = function(reallyDo, replaceWith, ignoreCase) {
     if (!RegExp.prototype.isPrototypeOf(reallyDo)) {
