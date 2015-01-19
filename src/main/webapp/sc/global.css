@@ -220,7 +220,7 @@ blockquote {
   margin: 15px 10px;
   border: 2px solid #eee;
   padding: 5px 5px 5px 35px;
-  background: #f4f5f7 url('http://my.oschina.net/img/blockquote.gif') no-repeat left top;
+  background: #f4f5f7 url('./tinymce_4.1.7/skins/lightgray/img/blockquote.gif') no-repeat left top;
   color: #060;
   font-size: 9pt;
   display: block;

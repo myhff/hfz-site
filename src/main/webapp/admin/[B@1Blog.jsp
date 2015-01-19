@@ -97,7 +97,7 @@
 <script id="cc_content" type="text/plain">
 ${article.content}
 </script>
-<script src="${staticPath}/sc/tinymce_4.1.0/tinymce.min.js"></script>
+<script src="${staticPath}/sc/tinymce_4.1.7/tinymce.min.js"></script>
 <script type="text/javascript">
 tinymce.init({
   selector: "#elm1",
