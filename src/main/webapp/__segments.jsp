@@ -5,12 +5,13 @@
 <c:if test="${param.template eq 'top' }">
 <div id="top">
 <header>
-  <h1 id="logo"><a href="${basePath}/" target="_self">LoveFF.cn</a></h1>
- <div id="info"><span class="tagline">Never, never, never, never give up.</span>
-<span id="admin-login">
-  <a href="${basePath}/admin/" target="_self">博客管理</a> |
- <a href="javascript:;" onclick="logout('${basePath}/admin/?tp=logout_');" target="_self">退出</a>
+  <h1 id="logo"><a href="${basePath}/" target="_self"><span>LoveFF.cn</span><img src="${staticPath}/sc/imgs/logo1.png" alt="" /></a></h1>
+ <div id="info">
+ <span id="admin-login">
+   <a href="${basePath}/admin/" target="_self">博客管理</a> |
+   <a href="javascript:;" onclick="logout('${basePath}/admin/?tp=logout_');" target="_self">退出</a>
 </span>
+ <span class="tagline">Never, never, never, never give up.</span>
 </div></header></div>
 </c:if>
 

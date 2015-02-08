@@ -18,14 +18,16 @@ a, a:active, a:visited { text-decoration: none; }
 
 body #top { background-color: aliceblue; background-color: white; }
 body #top header {
-  width: 980px; margin: 0 auto; padding: 15px 0 12px 0; position: relative; padding-top: 25px;
+  width: 980px; margin: 0 auto; padding: 10px 0 12px 0; position: relative;
 }
 body header #logo {
-  display: inline-block; margin: 20px 0 0; margin-bottom: 3px;
+  display: inline-block; margin: 0; margin-bottom: 3px;
   font-size: 24px; font-weight: normal; letter-spacing: -1px; line-height: 1;
-  display: none;
+  /*display: none;*/
 }
-body header #logo a { color: #5d7895; cursor: default; }
+body header #logo a { color: #5d7895; outline: none; }
+body header #logo a span { display: none; }
+body header #logo a img { display: block; border: 0; }
 body header #info .tagline {
   color: black; font-size: 13px; line-height: 1.334; padding-left: 8px;
   font-family: "Helvetica Neue",\5FAE\8F6F\96C5\9ED1,Tohoma;
