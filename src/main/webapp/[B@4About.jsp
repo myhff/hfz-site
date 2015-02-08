@@ -38,8 +38,14 @@
 <div class="post" style="border: 0;">
   <div class="blog-content">
     <p>本博客的内容：软件开发、云计算、互联网、生活感悟。</p>
-    <p>联系我：xmasmail (AT) 126.com</p>
-    <p>QQ群：205315604</p>
+    <p>Git演示：<a href="http://learngit.oschina.mopaas.com" style="text-decoration:underline;">http://learngit.oschina.mopaas.com</a></p>
+    <p>Contact我：codeff (AT) 126.com</p>
+    <p>
+    <br />
+    <a href="http://shang.qq.com/wpa/qunwpa?idkey=36e2949e3857b5a5b179f07575991a185ca7ba53e9147687ebfc04dedc174cd7">
+    <img border="0" src="http://pub.idqqimg.com/wpa/images/group.png" alt="DevNote" title="DevNote" />
+    </a>
+    </p>
     <p>&nbsp;</p>
     <p>&nbsp;</p>
     <p>&nbsp;</p>
