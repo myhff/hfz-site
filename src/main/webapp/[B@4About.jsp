@@ -34,15 +34,7 @@
 <base target="_blank">
 <body>
 
-<div id="top">
-<header>
-  <h1 id="logo"><a href="${basePath}/" target="_self">LoveFF.cn</a></h1>
- <div id="info"><span class="tagline">Never, never, never, never give up.</span>
-<span id="admin-login">
-  <a href="${basePath}/admin/" target="_self">博客管理</a> |
- <a href="javascript:;" onclick="logout('${basePath}/admin/?tp=logout_');" target="_self">退出</a>
-</span>
-</div></header></div>
+<jsp:include page="${'/__segments.jsp?template=top'}" />
 
 <div id="nav-wrap"><nav>
  <ul>
@@ -51,7 +43,7 @@
  <li><a href="${basePath}/category/${hitCatSlug}/" target="_self">${hitCatName}</a></li></c:if></ul></nav>
 </div>
 
-<div id="main" style="display:none;">
+<div id="main">
  <div id="content">
    <script src='http://git.oschina.net/object/learngit/widget_preview'></script>
 
@@ -72,46 +64,9 @@
 
 </div><!-- /#content -->
 
-<aside class="scroll-afloat">
- <section>
- <div id="search">
- <input id="q_keywords" value="${keywords}" x-webkit-speech="x-webkit-speech" placeholder="搜索..." /><button onclick="location.href='${basePath}/?search='+document.getElementById('q_keywords').value;">好手气</button>
-</div>
-</section>
- <section>
- <h3>博客分类</h3>
- <ul><c:forEach var="foo" items="${list2}">
- <c:if test="${hit_cat.catId eq foo.catId}">
- <li><a href="${basePath}/category/${foo.slug}/" target="_self"><strong>${foo.name}(${foo.count})</strong></a></li>
- </c:if>
- <c:if test="${not (hit_cat.catId eq foo.catId)}">
- <li><a href="${basePath}/category/${foo.slug}/" target="_self">${foo.name}(${foo.count})</a></li>
- </c:if>
- </c:forEach>
-</ul>
-</section>
- <section>
- <h3>友情链接</h3>
- <ul><li><a href="http://devnote.cn/" rel="friend" title="开发笔记" target="_blank" onclick="javascript:;">DevNote</a></li>
- <li><a href="http://www.majunwei.com/" rel="friend" title="小马House" target="_blank" onclick="javascript:;">小马House</a></li>
- <li><a href="http://my.oschina.net/obj" rel="friend" title="开源中国" target="_blank" onclick="javascript:;">开源中国</a></li>
-</ul>
-</section>
-</aside>
+<jsp:include page="${'/__segments.jsp?template=aside&hide_commons=1'}" />
 </div><!-- /#main -->
 
- <footer style="display:none;">
- <div>&#xa9; 2014 loveff.cn ' <a href="http://www.miitbeian.gov.cn/" target="_blank">京ICP备14030666号-1</a>
- <script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1253964422'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s4.cnzz.com/z_stat.php%3Fid%3D1253964422%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));</script>
-</div>
-</footer>
-<div id="qrcode" style="z-index: 999;cursor: pointer; position: fixed; bottom: 30px; left: 10px;"><img style="border: 1px solid #ddd;" width="95" height="95" src="${staticPath}/sc/imgs/qrcode_about.png" alt="扫描二维码即可访问本页" title="扫描二维码即可访问本页"></div>
-
-<script src="${staticPath}/sc/js/??/jquery-1.11.1.min.js,lazyload-min.js"></script>
-<script>
-  $(document).ready(function() { $('#main').show(); $('footer').fadeIn('fast'); });
-  LazyLoad.js(['${staticPath}/sc/??sh309/scripts/shCore.js,sh309/scripts/shAutoloader.js,js/loveff.js']);
-</script>
-<div id="backToTop" class="offScreen">返回顶部</div>
+<jsp:include page="${'/__segments.jsp?template=footer'}" />
 </body>
 </html><!--[if !IE]>|xGv00|f7a14134f03df8c4cb51c1307ee33cf1<![endif]-->
