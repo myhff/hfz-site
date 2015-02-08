@@ -11,24 +11,12 @@
 <title>LoveFF &raquo; 关于</title>
 <meta name="keywords" content="Linux, Python, Hadoop, 虚拟化, 云计算, 个人博客" />
 <meta name="description" content="Java个人博客" />
-<link href="${staticPath}/sc/??sh309/styles/shCoreDefault.css,global.css?t=201407240229" rel="stylesheet" />
+<link href="${staticPath}/sc/??sh309/styles/shCoreDefault.css,global.css?t=201502081612" rel="stylesheet" />
   <!--[if lt IE 9]>
-  <style>::selection { background:#c00!important; color:#fff!important; }</style>
 <script src="//cdn.staticfile.org/html5shiv/3.7/html5shiv.min.js"></script><![endif]-->
-<style> .pro_name a{color: #ff0000;} .osc_git_title{background-color: #edeef5;} .osc_git_box{background-color: #fafafa;} .osc_git_box{border-color: #d1d3e6;} .osc_git_info{color: #666;} .osc_git_main a{color: #435991;} </style>
+<style>  </style>
 <style>
- #content .pro_name a{color: #ff0000;}
- #content .osc_git_title{background-color: #edeef5;}
- #content .osc_git_box{background-color: #fafafa;}
- #content .osc_git_box{border-color: #d1d3e6;}
- #content .osc_git_info{color: #666;}
- #content .osc_git_main a{color: #435991;}
- #content .mini-icon { background: none; border: 0; }
- #content .osc_git_title { border-radius: 0; }
- #content .osc_git_box {
-   border-radius: 0; border-color: #d1d3e6; margin-top:0; border: 0; background: white;
- }
- #content .osc_git_title { background: #E8E8D0; }
+
 </style>
 </head>
 <base target="_blank">
@@ -45,7 +33,7 @@
 
 <div id="main">
  <div id="content">
-   <script src='http://git.oschina.net/object/learngit/widget_preview'></script>
+   <script src='http://git.oschina.net/myhff/learngit/widget_preview'></script>
 
 <div class="post" style="border: 0;">
   <div class="blog-content">

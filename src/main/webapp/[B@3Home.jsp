@@ -11,9 +11,8 @@
 <title>LoveFF${title}</title>
 <meta name="keywords" content="Linux, Python, Hadoop, 虚拟化, 云计算, 个人博客" />
 <meta name="description" content="Java个人博客" />
-<link href="${staticPath}/sc/??sh309/styles/shCoreDefault.css,global.css?t=201407240229" rel="stylesheet" />
+<link href="${staticPath}/sc/??sh309/styles/shCoreDefault.css,global.css?t=201502081612" rel="stylesheet" />
   <!--[if lt IE 9]>
-  <style>::selection { background:#c00!important; color:#fff!important; }</style>
 <script src="//cdn.staticfile.org/html5shiv/3.7/html5shiv.min.js"></script><![endif]-->
 </head>
 <body>

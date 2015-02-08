@@ -1,5 +1,7 @@
 @charset 'utf-8';
 
+::selection { background:#c00!important; color:#fff!important; }
+
 html { overflow-x: hidden; }
 html, body { height: 100%; margin: 0; }
 body { padding-bottom: 1px; background: #f9f9f9; }
@@ -245,3 +247,18 @@ blockquote {
 /* 滚动悬浮 */
 #main .scroll-afloat { }
 #main .scroll-afloat-impl { position: fixed; top: -270px; }
+
+/*  OSCGit */
+ #content .pro_name a{color: #ff0000;}
+ #content .osc_git_title{background-color: #edeef5;}
+ #content .osc_git_box{background-color: #fafafa;}
+ #content .osc_git_box{border-color: #d1d3e6;}
+ #content .osc_git_info{color: #666;}
+ #content .osc_git_main a{color: #435991;}
+ #content .mini-icon { background: none; border: 0; }
+ #content .osc_git_title { border-radius: 0; }
+ #content .osc_git_box {
+   border-radius: 0; border-color: #d1d3e6; margin-top:0; border: 0; background: white;
+ }
+ #content .osc_git_title { background: #E8E8D0; }
+ 
