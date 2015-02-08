@@ -14,10 +14,6 @@
 <link href="${staticPath}/sc/??sh309/styles/shCoreDefault.css,global.css?t=201502081612" rel="stylesheet" />
   <!--[if lt IE 9]>
 <script src="//cdn.staticfile.org/html5shiv/3.7/html5shiv.min.js"></script><![endif]-->
-<style>  </style>
-<style>
-
-</style>
 </head>
 <base target="_blank">
 <body>
