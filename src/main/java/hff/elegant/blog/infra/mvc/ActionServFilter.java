@@ -56,8 +56,8 @@ public class ActionServFilter implements Filter {
                 basePackage = null;
         }
         servletContext = config.getServletContext();
-        String path = ResourceBundle.getBundle(s, Locale.getDefault()).getString("domain");
-        servletContext.setAttribute("basePath", path + servletContext.getContextPath());
+        String path1 = ResourceBundle.getBundle(s, Locale.getDefault()).getString("domain");
+        servletContext.setAttribute("basePath", path1);
         String path2 = ResourceBundle.getBundle(s, Locale.getDefault()).getString("static.path");
         servletContext.setAttribute("staticPath", path2);
         String path3 = ResourceBundle.getBundle(s, Locale.getDefault()).getString("index.path");
