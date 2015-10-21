@@ -21,6 +21,7 @@ public class FileCancatUtils {
         try {
             outChannel = new FileOutputStream(outFile).getChannel();
             for(String f : files){
+                @SuppressWarnings("resource")
                 FileChannel fc = new FileInputStream(f).getChannel(); 
                 ByteBuffer bb = ByteBuffer.allocate(BUFSIZE);
                 while(fc.read(bb) != -1){
